@@ -1,0 +1,27 @@
+{ 
+  "gulp":{
+    "defaultTasks": ["css", "pug"]
+  },
+
+  "tasks": {
+    "css": {
+      "browserSupport" :        ["last 2 versions"],
+      "minifyCssOptions":       {},
+      "sourceFile":             ["../sass/styles.sass"],
+      "librariesSource":        "",
+      "destinationDirectory":   "../../public/assets/css/",
+      "destinationFile":        "styles.min.css",
+      "watchFiles":             "../sass/**/*.sass",
+      "watchTasks":             ["css"],
+      "sourcemapDest":          ".",
+      "sourcemapSourceRoot":    "../sass/"
+    },
+    
+    "pug": {
+      "source":                 "../pug/**/*.pug",
+      "destination":            "../../public/",
+      "watch":                  "../pug/**/*.pug",
+      "watchTasks":             ["pug"]
+    }
+  }
+}
